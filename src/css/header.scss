@@ -1,0 +1,27 @@
+#header {
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+.logo {
+  span {
+    font-size: $_30;
+    font-weight: $_700;
+    color: $_orange;
+    display: inline-block;
+    text-transform: capitalize;
+  }
+}
+.title {
+  font-size: $_30;
+  font-weight: $_700;
+  color: $_blue;
+  text-transform: capitalize;
+}
+.date {
+  font-size: $_30;
+  font-weight: $_400;
+  color: $_gray;
+  text-transform: uppercase;
+}

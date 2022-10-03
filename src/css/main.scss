@@ -1,0 +1,147 @@
+#main {
+  padding: 30px 0;
+}
+.item {
+  width: 350px;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+}
+.item__edit {
+  @include item__elem;
+  @include shadowBorder;
+  border: 1px solid rgba(0, 119, 255, 0.3);
+}
+.item__title {
+  font-size: $_24;
+  font-weight: 500;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+.item__buttons {
+  display: flex;
+}
+.item__add {
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-left: 15px;
+  i {
+    @include btnPlusHover;
+    font-size: $_24;
+    color: $_blue;
+  }
+}
+.item__del {
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin-left: 15px;
+  i {
+    @include btnDelHover;
+    font-size: $_24;
+    color: $_orange;
+  }
+}
+
+.item__total {
+  @include item__elem;
+  @include shadowBorder;
+}
+.item__total--text {
+  &::first-letter {
+    text-transform: uppercase;
+  }
+  span {
+    font-size: $_18;
+    color: $_gray;
+    font-weight: $_400;
+  }
+}
+.item__total--count {
+  font-size: $_18;
+  color: $_gray;
+  font-weight: $_400;
+}
+.items__cards {
+  padding: 15px;
+  min-height: 100px;
+  @include shadowBorder;
+}
+.card {
+  background: rgba(255, 0, 0, 0.05);
+  box-shadow: 0px -1px 1px 0px rgba(255, 0, 0, 0.45);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 20px 15px;
+}
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.card__name {
+  span {
+    font-size: $_18;
+    color: $_gray;
+    font-weight: $_400;
+    display: inline-block;
+    text-transform: capitalize;
+  }
+}
+.card__date {
+  font-size: $_16;
+  color: $_gray;
+  font-weight: $_400;
+}
+.card__main {
+  padding: 25px 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.card__title {
+  font-size: $_20;
+  font-weight: $_700;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+  margin-bottom: 15px;
+}
+.card__text {
+  p {
+    font-size: $_16;
+    color: $_gray;
+    font-weight: $_400;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__author {
+  color: $_blue;
+  font-size: $_16;
+  font-weight: $_500;
+  text-transform: capitalize;
+}
+.card__delete {
+  cursor: pointer;
+  i {
+    @include btnDelHover;
+    color: $_orange;
+    font-size: $_16;
+  }
+}
+.inprogress {
+}
+.done {
+}
+.maketodo {
+}

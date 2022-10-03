@@ -1,0 +1,25 @@
+{
+  "name": "todomenu",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndrewChapkovskij/ToDoMenu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndrewChapkovskij/ToDoMenu/issues"
+  },
+  "homepage": "https://github.com/AndrewChapkovskij/ToDoMenu#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0",
+    "sass": "^1.55.0"
+  }
+}

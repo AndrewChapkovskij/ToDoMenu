@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoMenu</title>
+    <link rel="stylesheet" href="./css/index.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <div class="wrap">
+          <div class="logo"><span>to</span><span>do</span></div>
+          <h2 class="title">what can I do today</h2>
+          <div class="date">20.10.2022</div>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <div class="container">
+        <div class="wrap">
+          <div class="item maketodo">
+            <div class="item__edit">
+              <h3 class="item__title">make todo</h3>
+              <div class="item__buttons">
+                <button class="item__add">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+                <button class="item__del">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+            <div class="item__total">
+              <div class="item__total--text">
+                <span>total</span>
+              </div>
+              <div class="item__total--count">0</div>
+            </div>
+            <div class="items__cards">
+              <div class="card">
+                <div class="card__header">
+                  <div class="card__name"><span>to</span><span>do</span></div>
+                  <div class="card__date">01.05.2022</div>
+                </div>
+                <div class="card__main">
+                  <h4 class="card__title">task</h4>
+                  <div class="card__text"><p>fguyfegugeievrevr</p></div>
+                </div>
+                <div class="card__footer">
+                  <div class="card__author">andrew</div>
+                  <div class="card__delete">
+                    <i class="fa-solid fa-trash"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item inprogress">
+            <div class="item__edit">
+              <h3 class="item__title">in progress</h3>
+              <div class="item__buttons">
+                <button class="item__del">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+            <div class="item__total">
+              <div class="item__total--text">
+                <span>total</span>
+              </div>
+              <div class="item__total--count">0</div>
+            </div>
+            <div class="items__cards"></div>
+          </div>
+          <div class="item done">
+            <div class="item__edit">
+              <h3 class="item__title">done</h3>
+              <div class="item__buttons">
+                <button class="item__del">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+            <div class="item__total">
+              <div class="item__total--text">
+                <span>total</span>
+              </div>
+              <div class="item__total--count">0</div>
+            </div>
+            <div class="items__cards"></div>
+          </div>
+        </div>
+      </div>
+      <section class="popup active">
+        <div class="popup__wrap">
+          <div class="popup__header">
+            <h3 class="popup__title">fill in required fields</h3>
+            <button class="popup__close">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <form action="" class="popup__form">
+            <div class="popup__form--title">
+              <label for="title">title</label>
+              <input
+                type="text"
+                name="title"
+                placeholder="Enter title for your note"
+              />
+            </div>
+            <div class="popup__form--description">
+              <label for="description">description</label>
+              <textarea
+                type="text"
+                name="description"
+                placeholder="Enter description for your note"
+              ></textarea>
+            </div>
+            <div class="popup__form--author">
+              <input type="text" name="author" placeholder="Author" />
+            </div>
+            <div class="popup__form--btns">
+              <button class="popup__form--btn popup__form--create">
+                create
+              </button>
+              <button class="popup__form--btn popup__form--cansel">
+                cansel
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

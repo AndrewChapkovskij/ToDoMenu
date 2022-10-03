@@ -1,0 +1,125 @@
+.popup {
+  background: rgba(168, 183, 250, 0.8);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  &.active {
+    display: none;
+  }
+}
+
+.popup__wrap {
+  background: $_write;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 15px;
+  width: 70vw;
+}
+.popup__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $_orange;
+  margin-bottom: 30px;
+}
+.popup__title {
+  &::first-letter {
+    text-transform: uppercase;
+  }
+  font-size: $_30;
+  font-weight: $_700;
+  color: $_orange;
+}
+.popup__close {
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    color: $_orangeHover;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+  color: $_orange;
+
+  background: none;
+  border: 1px solid $_orange;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  i {
+    font-size: $_18;
+  }
+}
+.fa-solid {
+}
+.fa-xmark {
+}
+.popup__form {
+}
+.popup__form--title {
+  margin-bottom: 30px;
+
+  label {
+    @include label;
+  }
+  input {
+    @include input;
+  }
+}
+.popup__form--description {
+  margin-bottom: 30px;
+
+  label {
+    @include label;
+  }
+  textarea {
+    @include input;
+    resize: none;
+    height: 100px;
+  }
+}
+.popup__form--author {
+  margin-bottom: 60px;
+
+  input {
+    @include input;
+  }
+}
+.popup__form--btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.popup__form--btn {
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 10px 35px;
+  font-size: $_16;
+  font-weight: $_700;
+  border: none;
+  border-radius: 30px;
+  color: $_write;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.popup__form--create {
+  background: $_blue;
+  &:hover {
+    background: $_blueHover;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+.popup__form--cansel {
+  background: $_orange;
+  &:hover {
+    background: $_orangeHover;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+  margin-left: 15px;
+}
