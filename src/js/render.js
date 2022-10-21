@@ -1,7 +1,7 @@
-export function createObj(title, text, author, date, id, status) {
-  this.title = title
-  this.text = text
-  this.author = author
+export function createObj({ title, text, author }, date, id, status) {
+  this.title = title.value
+  this.text = text.value
+  this.author = author.value
   this.date = date
   this.id = id
   this.status = status

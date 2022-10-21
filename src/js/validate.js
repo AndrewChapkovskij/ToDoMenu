@@ -1,4 +1,4 @@
-export default function validate(title, text, author) {
+export default function validate({ title, text, author }) {
   let flag = false
 
   let regTitle = /^[a-z0-9_-]{3,90}$/
