@@ -1,4 +1,5 @@
 import { render } from './render'
+import { getElemAll } from './getter'
 
 // Add all cards
 export function addCards(cardsArr, wrap) {
@@ -33,8 +34,10 @@ export function getIdCard(cardsArr) {
 }
 
 // Count total
-export function countTotal(items, cardArr) {
-  for (let i = 0; i < items.length; i++) {
+const TOTAL = getElemAll('.item__total--count')
+
+export function countTotal(cardArr) {
+  for (let i = 0; i < TOTAL.length; i++) {
     let count = 0
     if (cardArr) {
       for (let cardObj of cardArr) {
@@ -42,9 +45,9 @@ export function countTotal(items, cardArr) {
           count++
         }
       }
-      items[i].textContent = count
+      TOTAL[i].textContent = count
     } else {
-      items[i].textContent = count
+      TOTAL[i].textContent = count
     }
   }
 }

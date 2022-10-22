@@ -26,7 +26,7 @@
     </header>
     <main id="main">
       <div class="container">
-        <div class="wrap">
+        <div class="item_wrap">
           <div class="item maketodo">
             <div class="item__edit">
               <h3 class="item__title">make todo</h3>
@@ -81,48 +81,47 @@
             </div>
             <div class="items__cards"></div>
           </div>
-
-          <div class="popup active">
-            <div class="popup__wrap">
-              <div class="popup__header">
-                <h3 class="popup__title">fill in required fields</h3>
-                <button class="popup__close">
-                  <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="popup active">
+          <div class="popup__wrap">
+            <div class="popup__header">
+              <h3 class="popup__title">fill in required fields</h3>
+              <button class="popup__close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <form action="" class="popup__form">
+              <div class="popup__form--title">
+                <label for="title">title</label>
+                <span class="mistake"></span>
+                <input
+                  type="text"
+                  name="title"
+                  placeholder="Enter title for your note"
+                />
+              </div>
+              <div class="popup__form--description">
+                <label for="description">description</label>
+                <span class="mistake"></span>
+                <textarea
+                  type="text"
+                  name="description"
+                  placeholder="Enter description for your note"
+                ></textarea>
+              </div>
+              <div class="popup__form--author">
+                <span class="mistake"></span>
+                <input type="text" name="author" placeholder="Author" />
+              </div>
+              <div class="popup__form--btns">
+                <button class="popup__form--btn popup__form--create">
+                  create
+                </button>
+                <button class="popup__form--btn popup__form--cansel">
+                  cansel
                 </button>
               </div>
-              <form action="" class="popup__form">
-                <div class="popup__form--title">
-                  <label for="title">title</label>
-                  <span class="mistake"></span>
-                  <input
-                    type="text"
-                    name="title"
-                    placeholder="Enter title for your note"
-                  />
-                </div>
-                <div class="popup__form--description">
-                  <label for="description">description</label>
-                  <span class="mistake"></span>
-                  <textarea
-                    type="text"
-                    name="description"
-                    placeholder="Enter description for your note"
-                  ></textarea>
-                </div>
-                <div class="popup__form--author">
-                  <span class="mistake"></span>
-                  <input type="text" name="author" placeholder="Author" />
-                </div>
-                <div class="popup__form--btns">
-                  <button class="popup__form--btn popup__form--create">
-                    create
-                  </button>
-                  <button class="popup__form--btn popup__form--cansel">
-                    cansel
-                  </button>
-                </div>
-              </form>
-            </div>
+            </form>
           </div>
         </div>
       </div>

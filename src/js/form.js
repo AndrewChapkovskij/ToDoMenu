@@ -1,6 +1,6 @@
 import { getElem } from './getter'
 
-const FORM = getElem('.popup')
+export const FORM = getElem('.popup', document)
 
 export const FORM_CREATE = getElem('.popup__form--create', FORM)
 export const FORM_CLOSE = getElem('.popup__close', FORM)

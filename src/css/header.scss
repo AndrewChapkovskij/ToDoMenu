@@ -5,6 +5,8 @@
   margin-bottom: 20px;
 }
 .logo {
+  margin: 0 15px;
+
   span {
     font-size: $_30;
     font-weight: $_700;
@@ -18,10 +20,18 @@
   font-weight: $_700;
   color: $_blue;
   text-transform: capitalize;
+  margin: 0 15px;
+  @media (max-width: 480px) {
+    display: none;
+  }
 }
 .date {
   font-size: $_30;
   font-weight: $_400;
   color: $_gray;
   text-transform: uppercase;
+  margin: 0 15px;
+  @media (max-width: 250px) {
+    display: none;
+  }
 }

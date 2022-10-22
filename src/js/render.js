@@ -19,6 +19,14 @@ export function render({ title, text, author, date, id, status }) {
     </div>
     <div class="card__footer">
       <div class="card__author">${author}</div>
+      <div class="card__move">
+        <div class="move-item card__move--left">
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="move-item card__move--right">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
       <div class="card__delete" data-id="${id}">
         <i class="fa-solid fa-trash"></i>
       </div>

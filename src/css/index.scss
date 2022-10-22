@@ -26,15 +26,20 @@ html {
 }
 .container {
   max-width: 1170px;
+  @media (max-width: 991px) {
+    max-width: 960px;
+  }
+  @media (max-width: 767px) {
+    max-width: 720px;
+  }
+  @media (max-width: 575px) {
+    max-width: 540px;
+  }
   margin: auto;
   padding: 0 15px;
-  // z-index: 1;
-  // position: relative;
 }
 .wrap {
   margin: 0 -15px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  // align-items: center;
 }

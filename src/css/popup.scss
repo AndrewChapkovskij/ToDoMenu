@@ -23,6 +23,9 @@
   padding: 20px;
   border-radius: 15px;
   width: 70vw;
+  @media (max-width: 400px) {
+    width: 90vw;
+  }
 }
 .popup__header {
   display: flex;
@@ -37,6 +40,9 @@
     text-transform: uppercase;
   }
   font-size: $_30;
+  @media (max-width: 575px) {
+    font-size: $_24;
+  }
   font-weight: $_700;
   color: $_orange;
 }
@@ -48,11 +54,11 @@
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
   }
   color: $_orange;
-
+  margin-left: 15px;
   background: none;
   border: 1px solid $_orange;
-  width: 25px;
-  height: 25px;
+  min-width: 25px;
+  min-height: 25px;
   border-radius: 50%;
   i {
     font-size: $_18;
@@ -88,7 +94,9 @@
 }
 .popup__form--author {
   margin-bottom: 60px;
-
+  @media (max-width: 400px) {
+    margin-bottom: 40px;
+  }
   input {
     @include input;
   }
@@ -97,11 +105,20 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  @media (max-width: 575px) {
+    justify-content: space-between;
+  }
+  @media (max-width: 265px) {
+    justify-content: center;
+  }
 }
 .popup__form--btn {
   transition: 0.3s;
   cursor: pointer;
   padding: 10px 35px;
+  @media (max-width: 400px) {
+    padding: 10px 25px;
+  }
   font-size: $_16;
   font-weight: $_700;
   border: none;
@@ -120,6 +137,9 @@
   }
 }
 .popup__form--cansel {
+  @media (max-width: 265px) {
+    display: none;
+  }
   background: $_orange;
   &:hover {
     background: $_orangeHover;
@@ -127,6 +147,13 @@
   }
   margin-left: 15px;
 }
+
+// Validate form
 .mistake {
   color: $_red;
+
+  font-size: $_16;
+  @media (max-width: 400px) {
+    font-size: $_13;
+  }
 }

@@ -2,18 +2,13 @@ import { getStore, delItemStore, delItemsStore } from './store.js'
 import { getElemAll } from './getter'
 import { countTotal } from './actions'
 
-export function setBtnRemove(total) {
+export function setBtnRemove() {
   for (let btn of getElemAll('.card__delete')) {
-    btn.addEventListener('click', () => {
-      delItemStore('cards', getStore('cards'), btn.getAttribute('data-id'))
-
-      btn.closest('.card').remove()
-      countTotal(total, getStore('cards'))
-    })
+    btn.onclick = removeCard
   }
 }
 
-export function setBtnRemoveAll(total) {
+export function setBtnRemoveAll() {
   const BTN_DELETE_ALL = getElemAll('.item__del')
 
   for (let i = 0; i < BTN_DELETE_ALL.length; i++) {
@@ -27,8 +22,14 @@ export function setBtnRemoveAll(total) {
           card.remove()
         })
 
-        countTotal(total, getStore('cards'))
+        countTotal(getStore('cards'))
       }
     })
   }
+}
+
+function removeCard() {
+  delItemStore('cards', getStore('cards'), this.dataset.id)
+  this.closest('.card').remove()
+  countTotal(getStore('cards'))
 }

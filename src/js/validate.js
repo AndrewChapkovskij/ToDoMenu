@@ -1,9 +1,9 @@
 export default function validate({ title, text, author }) {
   let flag = false
 
-  let regTitle = /^[a-z0-9_-]{3,90}$/
-  let regText = /^[a-z0-9_-]{10,250}$/
-  let regAuthor = /^[a-z0-9_-]{3,25}$/
+  let regTitle = /^[a-zA-Z][\sa-zA-Z0-9_-]{3,90}$/
+  let regText = /^[a-zA-Z][\sa-zA-Z0-9_-]{10,250}$/
+  let regAuthor = /^[a-zA-Z][\sa-zA-Z0-9_-]{3,17}$/
 
   createMistake(
     regTitle,
@@ -34,11 +34,11 @@ export default function validate({ title, text, author }) {
 }
 
 function createMistake(reg, place, text, changeFlag) {
-  let mistake = place.previousElementSibling
+  let span = place.previousElementSibling
   if (!reg.test(place.value)) {
-    mistake.textContent = text
+    span.textContent = text
     changeFlag()
   } else {
-    mistake.textContent = ''
+    span.textContent = ''
   }
 }

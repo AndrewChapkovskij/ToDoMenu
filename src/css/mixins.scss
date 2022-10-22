@@ -25,6 +25,9 @@
 @mixin label {
   display: block;
   font-size: $_30;
+  @media (max-width: 575px) {
+    font-size: $_24;
+  }
   font-weight: $_400;
   color: $_gray;
   margin-bottom: 15px;
